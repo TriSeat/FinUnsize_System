@@ -1,0 +1,25 @@
+@using Google.Cloud.Firestore;
+@using Google.Cloud.Storage.V1;
+
+@page "/teste"
+@layout Lpa
+
+@code {
+    FirestoreDb db = FirestoreDb.Create("finunsize-126b5");
+    public class Usuario{
+        public string userId { get; set; }
+        public string nome { get; set; }
+    }
+
+    private IEnumerable<Usuario> usuarios = Array.Empty<Usuario>();
+
+    private async Task RefrescarTela(){
+        CollectionReference collection = db.Collection("usuarios");
+        QuerySnapshot users = await collection.GetSnapshotAsync();
+
+        var lista = new List<Usuario>();
+        /*foreach (var doc in users.Documents){
+            lista.Add(new Usuario { userId = doc., })
+        }*/
+    } 
+}

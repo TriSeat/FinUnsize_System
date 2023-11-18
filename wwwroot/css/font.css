@@ -1,0 +1,9 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+
+:root {
+    --regular: 'Poppins';
+    --bold: 'Poppins';
+    --title: 3rem;
+    --second-title: 1.5rem;
+    --text: 1rem;
+}

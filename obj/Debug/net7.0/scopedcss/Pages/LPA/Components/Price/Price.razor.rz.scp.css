@@ -1,0 +1,203 @@
+.prices[b-0vrzhwr5lw] {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0;
+    color: var(--cor-preto);
+    background: linear-gradient(180deg, #EFEFEF 0%, #D5DEDE 100%);
+}
+
+.prices-content[b-0vrzhwr5lw] {
+    padding: 10px 40px;
+    width: 100%;
+    max-width: 1920px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.prices-title h2[b-0vrzhwr5lw] {
+    font-size: var(--title);
+    font-weight: var(--regular);
+}
+
+.card-prices[b-0vrzhwr5lw] {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.card-price[b-0vrzhwr5lw] {
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    max-width: 100%;
+    height: 550px;
+    max-height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff1c;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    transition: all 0.5s ease-in-out;
+}
+
+.card-price-black[b-0vrzhwr5lw] {
+    background-color: var(--cor-preto) !important;
+    color: var(--cor-branca) !important;
+}
+
+.prices .btn-price-black[b-0vrzhwr5lw] {
+    background-color: #e6e6e6 !important;
+    color: var(--cor-preto) !important;
+    border: 1px solid var(--cor-branca) !important;
+}
+
+
+    .prices .btn-price-black:hover[b-0vrzhwr5lw] {
+        background-color: var(--cor-preto) !important;
+        color: var(--cor-branca) !important;
+    }
+
+
+.card-content[b-0vrzhwr5lw] {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    max-width: 270px;
+}
+
+
+.card-price h3[b-0vrzhwr5lw] {
+    font-size: var(--title);
+    font-family: var(--bold);
+}
+
+.card-price h4[b-0vrzhwr5lw] {
+    font-size: var(--second-title);
+    font-family: var(--bold);
+}
+
+.price-real[b-0vrzhwr5lw] {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+}
+
+.checks-prices[b-0vrzhwr5lw] {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.check-price[b-0vrzhwr5lw] {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+    .check-price i[b-0vrzhwr5lw] {
+        color: var(--cor-verde2);
+    }
+
+.card-price-black .check-price i[b-0vrzhwr5lw] {
+    color: var(--cor-verde) !important;
+}
+
+.prices .btn-price[b-0vrzhwr5lw] {
+    display: flex;
+    flex-direction: row;
+    padding: 15px 30px;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor-preto);
+    color: var(--cor-branca);
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    margin-top: 90px;
+    border: 1px solid var(--cor-preto);
+}
+
+
+    .prices .btn-price:hover[b-0vrzhwr5lw] {
+        background-color: #ffffff1c;
+        color: var(--cor-preto);
+    }
+
+.card-price:hover[b-0vrzhwr5lw] {
+    transform: translateY(-20px);
+    transition: transform 0.3s ease;
+}
+
+.prices-title[b-0vrzhwr5lw] {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+}
+
+
+@media screen and (max-width: 1024px ) {
+    .card-prices[b-0vrzhwr5lw] {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .card-price:hover[b-0vrzhwr5lw] {
+        transform: translateY(0px);
+        transition: none;
+    }
+
+    .prices-title[b-0vrzhwr5lw] {
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .prices-content[b-0vrzhwr5lw] {
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 480px ) {
+    .card-price[b-0vrzhwr5lw] {
+        width: 380px;
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 400px ) {
+    .card-price[b-0vrzhwr5lw] {
+        width: 320px;
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 340px ) {
+    .card-price[b-0vrzhwr5lw] {
+        width: 260px;
+    }
+
+
+
+    .card-content[b-0vrzhwr5lw] {
+        max-width: 250px;
+    }
+
+    .card-price h3[b-0vrzhwr5lw] {
+        font-size: 2rem;
+    }
+}
+
+.card-price h4[b-0vrzhwr5lw] {
+    font-size: 1rem;
+}

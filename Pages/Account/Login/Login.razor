@@ -1,0 +1,45 @@
+﻿@page "/login"
+@page "/user/login"
+@layout SignLayout
+
+<PageTitle>Login</PageTitle>
+
+<section class="sign__container">
+    <div class="sign__image">
+        <img src="./login.jpg">
+    </div>
+    <div class="sign__content">
+        <div class="sign__main">
+            <div class="sign__header">
+                <div class="header__title">
+                    <h1 class="title">Login</h1>
+                </div>
+                <div class="sign__header-btn">
+                    <a><i class="fa-brands fa-google"></i>Entrar com o google</a>
+                    <a><i class="fa-brands fa-github"></i>Entrar com o GitHub</a>
+                </div>
+                <div class="divider-lines">
+                    <div class="line"></div><p>ou</p><div class="line"></div>
+                </div>
+            </div>
+            <div class="sign__text">
+                <div class="sign__payload">
+                    <form>
+                        <div>
+                            <input type="text" placeholder="LOGIN" class="cvc" required>
+                            <input type="password" placeholder="Senha" class="titular" required>
+                        </div>
+                        <div class="form-bottom">
+                            <button type="submit">EFETUAR O LOGIN</button>
+                            <p>Não possui uma conta? <a href="/user/company">Faça o Cadastro</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@code {
+
+}

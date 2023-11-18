@@ -1,0 +1,59 @@
+﻿:root {
+    /*Main Colors*/
+
+    --clr-main-background: #fff;
+    --clr-main-vector-background: #f0f0f0;
+    --clr-main-white: #fff;
+    --clr-main-context: #555;
+    --clr-main-components: #eee;
+    --clr-main-buttons: #ccc;
+    --clr-main-cards: #f5f5f5;
+    --clr-main-cards-bottom: #ddd;
+    --clr-main-header: linear-gradient(280deg, #eee -8.99%, #ddd -8.98%, #ccc 78.89%);
+    --clr-main-search: #f0f0f0;
+    --clr-second-search: #f0f0f0;
+    --clr-second-card: #ddd;
+    --clr-second-header-background: linear-gradient(99deg, #eee -43.06%, #ddd 66.71%);
+    --clr-second-card-background: linear-gradient(320deg, #eee -31.52%, #ddd 197.25%);
+
+
+    /*Home Components*/
+
+    --clr-home-line: #555;
+    --clr-cards-header: #eee;
+    --clr-wave-cards: #ddd;
+
+
+    /*Bars*/
+
+    --clr-sidebar-config: #eee;
+    --clr-nav-icons: #555;
+    --clr-nav-components-background: #f0f0f0;
+    --clr-buttom-bar: #f0f0f0;
+
+
+    /*Modal colors*/
+
+    --clr-main-modal: rgba(255, 255, 255, 0.96);
+    --clr-main-modal-wave: #ddd;
+    --clr-main-placeholder: #ddd;
+    --clr-main-modal-button: #E15959;
+    --clr-main-modal-button-secondary: #555;
+    --clr-main-modal-purpple: #B0B3DC;
+
+
+    /*Employee*/
+
+    --clr-main-employee-component: #ddd;
+
+
+    /*Table Components*/
+
+    --clr-main-background-table: #f5f5f559;
+    --clr-main-table-components: #f0f0f0;
+
+
+    /*Projections*/
+
+    --clr-main-card-background: rgba(255, 255, 255, 0.90);
+}

@@ -1,0 +1,54 @@
+@page "/redirect"
+@page "/user/redirect"
+@layout SignLayout
+@inject NavigationManager NavigationManager
+
+<PageTitle>Redirect</PageTitle>
+
+<section class="sign__container">
+    <div class="sign__image">
+        <img src="./finish.png">
+    </div>
+    <div class="sign__content">
+        <div class="sign__main">
+            <div class="sign__text">
+                <div class="sign__payload">
+                    <div class="sign__passos">
+                        <div class="side__text">
+                            <div class="side__content">
+                                <p class="text">Dados Empresariais</p>
+                                <div class="circle" data-step="1"></div>
+                            </div>
+                            <div class="side__content">
+                                <p class="text">Dados Pessoais</p>
+                                <div class="circle" data-step="2"></div>
+                            </div>
+                            <div class="side__content">
+                                <p class="text">Método de Pagamento</p>
+                                <div class="circle" data-step="3"></div>
+                            </div>
+                            <div class="side__content">
+                                <p class="text">Finalização</p>
+                                <div class="circle" data-step="4"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <form @onsubmit="OnSubmitForm">
+                        <div>
+                            <h2>Sua Conta foi Criada <span class="wrap-line">com <span style="color: #387ED0;">sucesso</span></span></h2>
+                            <i class="fa-solid fa-square-check" style="color: #387ED0; font-size: 4.75rem;"></i>
+                        </div>
+                        <p>Agora você pode desfrutar o máximo de nosso serviço sem restrições!</p>
+                        <div class="form-bottom">
+                            <button type="submit">Fazer Login</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@code {
+    private async Task OnSubmitForm() => NavigationManager.NavigateTo("/user/login");
+}

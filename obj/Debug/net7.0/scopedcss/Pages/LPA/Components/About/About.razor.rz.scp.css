@@ -1,0 +1,168 @@
+.sobre[b-u3wnpaop5l] {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, #EFEFEF 0%, #D5DEDE 100%);
+}
+
+
+    .sobre .content[b-u3wnpaop5l] {
+        display: flex;
+        width: 100%;
+        max-width: 1920px;
+        justify-content: center;
+    }
+
+    .sobre .image-area[b-u3wnpaop5l] {
+        position: -webkit-sticky; /* Safari */
+        position: sticky;
+        top: 0;
+        height: 100%;
+        align-self: flex-start;
+        height: 100vh;
+        align-self: stretch;
+        display: flex;
+        width: 100%;
+        max-height: 1920px;
+    }
+
+        .sobre .image-area img[b-u3wnpaop5l] {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover; /* Evita que a imagem estique */
+        }
+
+    .sobre .text-area[b-u3wnpaop5l] {
+        margin: 50px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        color: var(--cor-preto);
+    }
+
+        .sobre .text-area .content[b-u3wnpaop5l] {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 600px;
+            width: 100%;
+        }
+
+            .sobre .text-area .content img[b-u3wnpaop5l] {
+                display: flex;
+                width: 100%;
+            }
+
+            .sobre .text-area .content .analysis[b-u3wnpaop5l] {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+                .sobre .text-area .content .analysis .static[b-u3wnpaop5l] {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                }
+
+                    .sobre .text-area .content .analysis .static .text-static[b-u3wnpaop5l] {
+                        display: flex;
+                        flex-direction: row;
+                        width: 100%;
+                        justify-content: space-between;
+                    }
+
+            .sobre .text-area .content .text-content[b-u3wnpaop5l] {
+                display: flex;
+                flex-direction: column;
+                gap: 50px;
+            }
+
+                .sobre .text-area .content .text-content .title-an[b-u3wnpaop5l] {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                }
+
+                    .sobre .text-area .content .text-content .title-an .checks[b-u3wnpaop5l] {
+                        display: grid;
+                        grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+                        grid-gap: 5px;
+                    }
+
+                        .sobre .text-area .content .text-content .title-an .checks .check[b-u3wnpaop5l] {
+                            display: flex;
+                            flex-direction: row;
+                            gap: 5px;
+                            align-items: center;
+                        }
+
+
+
+
+
+
+            .sobre .text-area .content .analysis .static .line1[b-u3wnpaop5l]::before {
+                animation: slideFromLeft1-b-u3wnpaop5l 1s ease-out forwards;
+            }
+
+
+@keyframes slideFromLeft1-b-u3wnpaop5l {
+    to {
+        width: 52%; /* Defina a largura desejada quando a animação terminar */
+    }
+}
+
+.sobre .text-area .content .analysis .static .line2[b-u3wnpaop5l]::before {
+    animation: slideFromLeft2-b-u3wnpaop5l 1s ease-out forwards;
+}
+
+@keyframes slideFromLeft2-b-u3wnpaop5l {
+    to {
+        width: 22%; /* Defina a largura desejada quando a animação terminar */
+    }
+}
+
+.sobre .text-area .content .analysis .static .line3[b-u3wnpaop5l]::before {
+    animation: slideFromLeft3-b-u3wnpaop5l 1s ease-out forwards;
+}
+
+@keyframes slideFromLeft3-b-u3wnpaop5l {
+    to {
+        width: 75%; /* Defina a largura desejada quando a animação terminar */
+    }
+}
+
+.sobre .text-area .content .analysis .static .line3[b-u3wnpaop5l]::before, .sobre .text-area .content .analysis .static .line2[b-u3wnpaop5l]::before, .sobre .text-area .content .analysis .static .line1[b-u3wnpaop5l]::before {
+    content: "";
+    display: flex;
+    z-index: 1000;
+    width: 0; /* Comece com largura zero para ocultar a linha */
+    height: 5px;
+    background-color: var(--cor-preto) !important;
+    top: 0;
+    left: 0;
+    position: relative;
+}
+
+.sobre .text-area .content .analysis .static .line3[b-u3wnpaop5l], .sobre .text-area .content .analysis .static .line2[b-u3wnpaop5l], .sobre .text-area .content .analysis .static .line1[b-u3wnpaop5l] {
+    display: flex;
+    width: 100% !important;
+    height: 5px;
+    background-color: #929EA5;
+    position: relative; /* Adicione position: relative */
+}
+
+@media screen and (max-width: 1280px ) {
+    .sobre .text-area[b-u3wnpaop5l] {
+        margin: 50px 10px;
+    }
+}
+
+@media screen and (max-width: 620px ) {
+    .sobre .content .image-area[b-u3wnpaop5l] {
+        display: none;
+    }
+}

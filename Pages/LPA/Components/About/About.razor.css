@@ -1,0 +1,168 @@
+.sobre {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, #EFEFEF 0%, #D5DEDE 100%);
+}
+
+
+    .sobre .content {
+        display: flex;
+        width: 100%;
+        max-width: 1920px;
+        justify-content: center;
+    }
+
+    .sobre .image-area {
+        position: -webkit-sticky; /* Safari */
+        position: sticky;
+        top: 0;
+        height: 100%;
+        align-self: flex-start;
+        height: 100vh;
+        align-self: stretch;
+        display: flex;
+        width: 100%;
+        max-height: 1920px;
+    }
+
+        .sobre .image-area img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover; /* Evita que a imagem estique */
+        }
+
+    .sobre .text-area {
+        margin: 50px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        color: var(--cor-preto);
+    }
+
+        .sobre .text-area .content {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 600px;
+            width: 100%;
+        }
+
+            .sobre .text-area .content img {
+                display: flex;
+                width: 100%;
+            }
+
+            .sobre .text-area .content .analysis {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+                .sobre .text-area .content .analysis .static {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                }
+
+                    .sobre .text-area .content .analysis .static .text-static {
+                        display: flex;
+                        flex-direction: row;
+                        width: 100%;
+                        justify-content: space-between;
+                    }
+
+            .sobre .text-area .content .text-content {
+                display: flex;
+                flex-direction: column;
+                gap: 50px;
+            }
+
+                .sobre .text-area .content .text-content .title-an {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                }
+
+                    .sobre .text-area .content .text-content .title-an .checks {
+                        display: grid;
+                        grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+                        grid-gap: 5px;
+                    }
+
+                        .sobre .text-area .content .text-content .title-an .checks .check {
+                            display: flex;
+                            flex-direction: row;
+                            gap: 5px;
+                            align-items: center;
+                        }
+
+
+
+
+
+
+            .sobre .text-area .content .analysis .static .line1::before {
+                animation: slideFromLeft1 1s ease-out forwards;
+            }
+
+
+@keyframes slideFromLeft1 {
+    to {
+        width: 52%; /* Defina a largura desejada quando a animação terminar */
+    }
+}
+
+.sobre .text-area .content .analysis .static .line2::before {
+    animation: slideFromLeft2 1s ease-out forwards;
+}
+
+@keyframes slideFromLeft2 {
+    to {
+        width: 22%; /* Defina a largura desejada quando a animação terminar */
+    }
+}
+
+.sobre .text-area .content .analysis .static .line3::before {
+    animation: slideFromLeft3 1s ease-out forwards;
+}
+
+@keyframes slideFromLeft3 {
+    to {
+        width: 75%; /* Defina a largura desejada quando a animação terminar */
+    }
+}
+
+.sobre .text-area .content .analysis .static .line3::before, .sobre .text-area .content .analysis .static .line2::before, .sobre .text-area .content .analysis .static .line1::before {
+    content: "";
+    display: flex;
+    z-index: 1000;
+    width: 0; /* Comece com largura zero para ocultar a linha */
+    height: 5px;
+    background-color: var(--cor-preto) !important;
+    top: 0;
+    left: 0;
+    position: relative;
+}
+
+.sobre .text-area .content .analysis .static .line3, .sobre .text-area .content .analysis .static .line2, .sobre .text-area .content .analysis .static .line1 {
+    display: flex;
+    width: 100% !important;
+    height: 5px;
+    background-color: #929EA5;
+    position: relative; /* Adicione position: relative */
+}
+
+@media screen and (max-width: 1280px ) {
+    .sobre .text-area {
+        margin: 50px 10px;
+    }
+}
+
+@media screen and (max-width: 620px ) {
+    .sobre .content .image-area {
+        display: none;
+    }
+}

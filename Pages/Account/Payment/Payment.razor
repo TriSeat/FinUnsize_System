@@ -1,0 +1,81 @@
+@page "/payment"
+@page "/user/payment"
+@layout SignLayout
+
+<PageTitle>Payment</PageTitle>
+
+<section class="sign__container">
+    <div class="sign__image">
+        <img src="./payment.png">
+    </div>
+    <div class="sign__content">
+        <div class="sign__main">
+            <div class="sign__header">
+                <div class="header__title">
+                    <h1 class="title">Criar Conta</h1>
+                </div>
+                <div class="sign__header-btn">
+                    <a><i class="fa-brands fa-cc-visa"></i>Cartão de Crédito</a>
+                    <a><i class="fa-brands fa-cc-mastercard"></i>Cartão de débito</a>
+                </div>
+                <div class="divider-lines">
+                    <div class="line"></div><p>ou</p><div class="line"></div>
+                </div>
+            </div>
+            <div class="sign__text">
+                <div class="sign__payload">
+                    <div class="sign__passos">
+                        <div class="side__text">
+                            <div class="side__content">
+                                <p class="text">Dados Empresariais</p>
+                                <div class="circle" data-step="1"></div>
+                            </div>
+                            <div class="side__content  finalizacao">
+                                <p class="text">Dados Pessoais</p>
+                                <div class="circle" data-step="2"></div>
+                            </div>
+                            <div class="side__content">
+                                <p class="text">Método de Pagamento</p>
+                                <div class="circle" data-step="3"></div>
+                            </div>
+                            <div class="side__content">
+                                <p class="text">Finalização</p>
+                                <div class="circle" data-step="4"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <form>
+                        <h2>Dados de Pagamento</h2>
+                        <div>
+                            <input type="text" placeholder="Número do Cartão" class="numero" required>
+                            <input type="date" placeholder="MM/YY" class="date" required>
+                        </div>
+                        <div>
+                            <input type="text" placeholder="CVC" class="cvc" required>
+                            <input type="text" placeholder="Nome do Titular" class="titular" required>
+                        </div>
+                        <div>
+                            <input type="text" placeholder="Endereço" class="cep" required>
+                            <input type="text" placeholder="Complemento" class="complemento" required>
+                        </div>
+                        <div>
+                           <select>
+                                <option>FinUnsize Lite (10% de Desconto)</option>
+                                <option>Unify Standard (20% Poupado)</option>
+                                <option>FinSpectrum Pro (30% Poupado)</option>
+                            </select>
+                        </div>
+                        <div class="form-bottom">
+                            <button type="submit">ASSINAR PLANO</button>
+                            <p>Já Possui uma conta? <a href="/user/login">Faça Login</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@code {
+
+}

@@ -1,0 +1,76 @@
+﻿@page "/sign"
+@page "/user/sign"
+@layout SignLayout
+@inject NavigationManager NavigationManager
+
+
+<PageTitle>SignUp</PageTitle>
+
+<section class="sign__container">
+    <div class="sign__image">
+        <img src="./sign.png">
+    </div>
+    <div class="sign__content">
+        <div class="sign__main">
+            <div class="sign__header">
+                <div class="header__title">
+                    <h1 class="title">Criar Conta</h1>
+                </div>
+                <div class="sign__header-btn">
+                    <a><i class="fa-brands fa-google"></i>Entrar com o google</a>
+                    <a><i class="fa-brands fa-github"></i>Entrar com o GitHub</a>
+                </div>
+                <div class="divider-lines">
+                    <div class="line"></div><p>ou</p><div class="line"></div>
+                </div>
+            </div>
+            <div class="sign__text">
+                <div class="sign__payload">
+                    <div class="sign__passos">
+                        <div class="side__text">
+                            <div class="side__content">
+                                <p class="text">Dados Empresariais</p>
+                                <div class="circle" data-step="1"></div>
+                            </div>
+                            <div class="side__content">
+                                <p class="text">Dados Pessoais</p>
+                                <div class="circle" data-step="2"></div>
+                            </div>
+                            <div class="side__content">
+                                <p class="text">Método de Pagamento</p>
+                                <div class="circle" data-step="3"></div>
+                            </div>
+                            <div class="side__content finalizacao">
+                                <p class="text">Finalização</p>
+                                <div class="circle" data-step="4"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <form @onsubmit="OnSubmitForm">
+                        <h2>Dados Pessoais</h2>
+                        <div>
+                            <input type="text" placeholder="Nome" class="nome" required>
+                            <input type="text" placeholder="Login" class="login" required>
+                        </div>
+                        <div>
+                            <input type="password" placeholder="Password" class="password" required>
+                            <input type="email" placeholder="Email" class="email" required>
+                        </div>
+                        <div>
+                            <input type="text" placeholder="Telefone" class="telefone" required>
+                            <input type="text" placeholder="CEP" class="cep" required>
+                        </div>
+                        <div class="form-bottom">
+                            <button type="submit">CADASTRAR-SE</button>
+                            <p>Já Possui uma conta? <a href="/user/login">Faça Login</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@code {
+    private async Task OnSubmitForm() => NavigationManager.NavigateTo("/user/payment");
+}
