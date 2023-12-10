@@ -1,33 +1,31 @@
-# FinUnsize - DocumentaÁ„o
+# FinUnsize - Documenta√ß√£o
 
 ![FinUnsize](https://i.imgur.com/XlAENqn.png)
 
-## IntroduÁ„o
+## Introdu√ß√£o
 
-Este documento fornece informaÁıes detalhadas sobre o projeto Blazor Server desenvolvido com .NET 7. 
-O Blazor Server È uma estrutura de aplicativo da Web baseada em .NET que permite a criaÁ„o de aplicativos 
-da web interativos e ricos em recursos usando C# e HTML. Este projeto especÌfico demonstra a construÁ„o de uma aplicaÁ„o simples com Blazor Server.
+Este documento fornece informa√ß√µes detalhadas sobre o projeto ASP .NET Core Blazor Server desenvolvido com .NET 7.  
 
-## PrÈ-Requisitos
+## Pr√©-Requisitos
 
-Antes de comeÁar, certifique-se de ter os seguintes itens instalados em sua m·quina:
+Antes de come√ßar, certifique-se de ter os seguintes itens instalados em sua m√°quina:
 
 - [.NET 7 SDK](https://dotnet.microsoft.com/pt-br/download/dotnet/7.0)
 - [Visual Studio](https://visualstudio.microsoft.com/pt-br/) ou [Visual Studio Code](https://code.visualstudio.com) (opcional)
 
-## Parte 1 Clonando o repositÛrio
+## Parte 1 Clonando o reposit√≥rio
 
 1. Abra o terminal ou prompt de comando.
-2. Execute o seguinte comando para clonar o repositÛrio:
+2. Execute o seguinte comando para clonar o reposit√≥rio:
 
 ```SHELL
 git clone https://github.com/TriSeat/FinUnsize_System
 ```
 
 
-## Parte 2: Navegando para o DiretÛrio do Projeto
+## Parte 2: Navegando para o Diret√≥rio do Projeto
 
-1. Navegue atÈ o diretÛrio do projeto com o seguinte comando:
+1. Navegue at√© o diret√≥rio do projeto com o seguinte comando:
 
 ```SHELL
 cd FinUnsize_System
@@ -37,14 +35,14 @@ cd FinUnsize_System
 
 #### Usando Visual Studio
 
-1. Abra o arquivo de soluÁ„o (nome-do-projeto.sln) no Visual Studio.
-2. Certifique-se de que o projeto Blazor Server È definido como projeto de inicializaÁ„o.
+1. Abra o arquivo de solu√ß√£o (nome-do-projeto.sln) no Visual Studio.
+2. Certifique-se de que o projeto Blazor Server √© definido como projeto de inicializa√ß√£o.
 3. Pressione F5 ou clique em "Iniciar" para executar o projeto.
 
 
 #### Usando Visual Studio Code
 
-1. Abra o diretÛrio do projeto no Visual Studio Code.
+1. Abra o diret√≥rio do projeto no Visual Studio Code.
 2. Abra o terminal integrado.
 3. Execute o seguinte comando para iniciar o aplicativo:
 
@@ -52,9 +50,9 @@ cd FinUnsize_System
 dotnet run
 ```
 
-**ObservaÁ„o:** Para que o sistema esteja conectado ao banco e as regras de negÛcio, È necess·rio
-que a API esteja rodando em localhost. Para tal, siga os passos de como a subir no repositÛrio [FinUnsize_API](https://github.com/TriSeat/FinUnsize_API/bl).
-PÛs subir, adicione a url base no arquivo: **appsettings.json**. Exemplo:
+**Observa√ß√£o:** Para que o sistema esteja conectado ao banco e as regras de neg√≥cio, √© necess√°rio
+que a API esteja rodando em localhost. Para tal, siga os passos de como a subir no reposit√≥rio [FinUnsize_API](https://github.com/TriSeat/FinUnsize_API/bl).
+P√≥s subir, adicione a url base no arquivo: **appsettings.json**. Exemplo:
 
 ```JSON
   "AllowedHosts": "*",
@@ -63,27 +61,27 @@ PÛs subir, adicione a url base no arquivo: **appsettings.json**. Exemplo:
   }
 ```
 
-## Parte 4: Acessando a AplicaÁ„o
+## Parte 4: Acessando a Aplica√ß√£o
 
-ApÛs a execuÁ„o bem-sucedida do projeto, acesse a aplicaÁ„o em seu navegador utilizando o seguinte URL:
+Ap√≥s a execu√ß√£o bem-sucedida do projeto, acesse a aplica√ß√£o em seu navegador utilizando o seguinte URL:
 
 http://localhost:5000
 
-Para mais informaÁıes sobre Blazor e .NET 7, consulte a [documentaÁ„o oficial do Blazor](https://learn.microsoft.com/pt-br/aspnet/core/blazor/?view=aspnetcore-8.0) e a [documentaÁ„o do .NET](https://learn.microsoft.com/pt-br/dotnet/).
+Para mais informa√ß√µes sobre Blazor e .NET 7, consulte a [documenta√ß√£o oficial do Blazor](https://learn.microsoft.com/pt-br/aspnet/core/blazor/?view=aspnetcore-8.0) e a [documenta√ß√£o do .NET](https://learn.microsoft.com/pt-br/dotnet/).
 
-## DescriÁ„o - RoadMap
+## Descri√ß√£o - RoadMap
 
-Este sistema tem como foco realizar a gest„o de estabelecimentos, sendo na parte logistica e financeira.
-Com isso, contÈm telas especializadas, cujo qual, cumprem tais funÁıes, sendo respectivamente:
+Este sistema tem como foco realizar a gest√£o de estabelecimentos, sendo na parte logistica e financeira.
+Com isso, cont√©m telas especializadas, cujo qual, cumprem tais fun√ß√µes, sendo respectivamente:
 
 - Home (Proposta da empresa);
 - Login;
-- Cadastro (Dados Empresariais, Dados Pessoais, Pagamento e FinalizaÁ„o);
+- Cadastro (Dados Empresariais, Dados Pessoais, Pagamento e Finaliza√ß√£o);
 - Home (Dashboard)
-- Produtos (EspecificaÁıes: VizualizaÁ„o, cadastro e atualizaÁ„o (CRUD));
-- Usu·rios (Podendo ser acessada somente pelo usu·rio Plano);
-- Usu·rio (Credenciais do usu·rio da sess„o);
+- Produtos (Especifica√ß√µes: Vizualiza√ß√£o, cadastro e atualiza√ß√£o (CRUD));
+- Usu√°rios (Podendo ser acessada somente pelo usu√°rio Plano);
+- Usu√°rio (Credenciais do usu√°rio da sess√£o);
 - Caixas;
-- Funcion·rios;
+- Funcion√°rios;
 
-Para ver mais acerca das telas e seu RoadMap, assista o [VÌdeo da ApresentaÁ„o do Sistema](https://drive.google.com/file/d/1QT3Wwr4PlWZdhVAUEbdWzNc7cxShJ9nc/view?usp=drive_link).
+Para ver mais acerca das telas e seu RoadMap, assista o [V√≠deo da Apresenta√ß√£o do Sistema](https://drive.google.com/file/d/1QT3Wwr4PlWZdhVAUEbdWzNc7cxShJ9nc/view?usp=drive_link).
