@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FinUnsize")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3023d5f4ba7486d59e8aa68e4e164e98e5f53544")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("FinUnsize")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FinUnsize")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

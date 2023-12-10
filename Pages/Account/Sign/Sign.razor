@@ -1,8 +1,9 @@
 ﻿@page "/sign"
 @page "/user/sign"
 @layout SignLayout
+@inject ApiService service
 @inject NavigationManager NavigationManager
-
+@inject IJSRuntime jsRuntime
 
 <PageTitle>SignUp</PageTitle>
 
@@ -49,16 +50,16 @@
                     <form @onsubmit="OnSubmitForm">
                         <h2>Dados Pessoais</h2>
                         <div>
-                            <input type="text" placeholder="Nome" class="nome" required>
-                            <input type="text" placeholder="Login" class="login" required>
+                            <input type="text" placeholder="Nome" class="nome" @bind-value="sign.nome" required>
+                            <input type="text" placeholder="Login" class="login" @bind-value="sign.login" required>
                         </div>
                         <div>
-                            <input type="password" placeholder="Password" class="password" required>
-                            <input type="email" placeholder="Email" class="email" required>
+                            <input type="password" placeholder="Password" class="password" @bind-value="sign.password" required>
+                            <input type="email" placeholder="Email" class="email" @bind-value="sign.email" required>
                         </div>
                         <div>
-                            <input type="text" placeholder="Telefone" class="telefone" required>
-                            <input type="text" placeholder="CEP" class="cep" required>
+                            <input type="text" placeholder="Telefone" class="telefone" @bind-value="sign.telefone" required>
+                            <input type="text" placeholder="CEP" class="cep" @bind-value="sign.cep" required>
                         </div>
                         <div class="form-bottom">
                             <button type="submit">CADASTRAR-SE</button>
@@ -72,5 +73,21 @@
 </section>
 
 @code {
-    private async Task OnSubmitForm() => NavigationManager.NavigateTo("/user/payment");
+    private SignModel sign = new SignModel();
+
+   
+
+    private async Task OnSubmitForm()
+    {
+        try
+        {
+            await service.Post<object>("user/singup", sign);
+            NavigationManager.NavigateTo("/user/payment");
+        }
+        catch (HttpRequestException ex)
+        {
+            await jsRuntime.InvokeVoidAsync("alert", "Erro ao cadastrar empresa: " + ex.Message);
+        }
+    }
+
 }
