@@ -8,42 +8,50 @@
 
   <ItemGroup>
     <Compile Remove="Pages\Account\static\**" />
+    <Compile Remove="Pages\Cashier\Business\**" />
+    <Compile Remove="Pages\Cashier\Components\**" />
     <Compile Remove="Pages\Login\**" />
+    <Compile Remove="Pages\LPA\Static\**" />
+    <Compile Remove="Pages\Projections\Business\**" />
+    <Compile Remove="Pages\Projections\Components\**" />
+    <Compile Remove="Pages\Sale\Buisiness\**" />
     <Compile Remove="Pages\Setting\**" />
     <Content Remove="Pages\Account\static\**" />
+    <Content Remove="Pages\Cashier\Business\**" />
+    <Content Remove="Pages\Cashier\Components\**" />
     <Content Remove="Pages\Login\**" />
+    <Content Remove="Pages\LPA\Static\**" />
+    <Content Remove="Pages\Projections\Business\**" />
+    <Content Remove="Pages\Projections\Components\**" />
+    <Content Remove="Pages\Sale\Buisiness\**" />
     <Content Remove="Pages\Setting\**" />
     <EmbeddedResource Remove="Pages\Account\static\**" />
+    <EmbeddedResource Remove="Pages\Cashier\Business\**" />
+    <EmbeddedResource Remove="Pages\Cashier\Components\**" />
     <EmbeddedResource Remove="Pages\Login\**" />
+    <EmbeddedResource Remove="Pages\LPA\Static\**" />
+    <EmbeddedResource Remove="Pages\Projections\Business\**" />
+    <EmbeddedResource Remove="Pages\Projections\Components\**" />
+    <EmbeddedResource Remove="Pages\Sale\Buisiness\**" />
     <EmbeddedResource Remove="Pages\Setting\**" />
     <None Remove="Pages\Account\static\**" />
+    <None Remove="Pages\Cashier\Business\**" />
+    <None Remove="Pages\Cashier\Components\**" />
     <None Remove="Pages\Login\**" />
+    <None Remove="Pages\LPA\Static\**" />
+    <None Remove="Pages\Projections\Business\**" />
+    <None Remove="Pages\Projections\Components\**" />
+    <None Remove="Pages\Sale\Buisiness\**" />
     <None Remove="Pages\Setting\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="Pages\LPA\Static\lpa.js" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Pages\Box\Components\" />
-    <Folder Include="Pages\Box\Business\" />
-    <Folder Include="Pages\Employee\Components\" />
+    <Folder Include="Pages\UserData\Business\" />
     <Folder Include="Pages\Employee\Business\" />
     <Folder Include="Pages\Expanse\Business\" />
-    <Folder Include="Pages\Expanse\Components\" />
-    <Folder Include="Pages\Home\Components\" />
     <Folder Include="Pages\Home\Business\" />
-    <Folder Include="Pages\Product\Components\" />
-    <Folder Include="Pages\Product\Business\" />
-    <Folder Include="Pages\Projections\Components\" />
-    <Folder Include="Pages\Projections\Business\" />
-    <Folder Include="Pages\Purchase\Components\" />
     <Folder Include="Pages\Purchase\Business\" />
-    <Folder Include="Pages\Sale\Components\" />
-    <Folder Include="Pages\Sale\Buisiness\" />
-    <Folder Include="Pages\User\Components\" />
-    <Folder Include="Pages\User\Business\" />
+    <Folder Include="Pages\Sale\Business\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -58,6 +66,7 @@
     <PackageReference Include="dotenv.net" Version="3.1.3" />
     <PackageReference Include="Google.Cloud.Firestore" Version="3.4.0" />
     <PackageReference Include="Google.Cloud.Storage.V1" Version="4.7.0" />
+    <PackageReference Include="MatBlazor" Version="2.10.0" />
   </ItemGroup>
 
 </Project>

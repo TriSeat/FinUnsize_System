@@ -1,15 +1,37 @@
-﻿@page "/counter"
+﻿@inject ApiResponse apiResponse;
+@inject IJSRuntime JSRuntime
+@inject NavigationManager NavigationManager
+@inject Authentication auth
+@page "/counter"
 
 <PageTitle>Counter</PageTitle>
 
-<h1>Counter</h1>
+    <h1>Counter</h1>
 
-<p role="status">Current count: @currentCount</p>
+    <p role="status">Current count: @currentCount</p>
 
-<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+    <button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+<MatButton>Test</MatButton>
+
+    @if (credentials != null)
+    {
+        <h1>@credentials.nome</h1>
+    <h3 class="mat-subtitle1">Reversed</h3>
+    }
+    else
+    {
+    }
 
 @code {
     private int currentCount = 0;
+    private Credentials credentials;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await auth.Access(Roles.MANAGER);
+        credentials = await apiResponse.Credentials();
+        StateHasChanged();
+    }
 
     private void IncrementCount()
     {

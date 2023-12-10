@@ -1,5 +1,92 @@
-﻿<h3>Product</h3>
+﻿@inject ApiResponse apiresponse
+@inject ApiService service
+@inject Authentication auth
+
+
+@page "/dashboard/product"
+
+<PageTitle>Produto</PageTitle>
+
+@if (data != null)
+{
+    <section class="product__main">
+        <div class="product__header">
+            <div class="product__header-left">
+                <i class="fa-solid fa-boxes-stacked"></i>
+                <p>PRODUTOS</p>
+            </div>
+            <div class="product__header-right">
+                <p><span>PRODUTOS</span> | VIEW</p>
+                <a @onclick="OpenCreate"><i class="fa-solid fa-plus"></i> ADICIONAR MAIS</a>
+            </div>
+        </div>
+        <div class="header__bar">
+            <div class="product__header-search">
+                <input type="text" placeholder="PESQUISE POR UM PRODUTO">
+                <div class="header__search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+        </div>
+        <div class="product__main-content">
+            <div class="product__cards">
+                @foreach (var item in data)
+                {
+                    <div class="product__card">
+                        <div class="product__card-content">
+                            <div class="product__card-icon">
+                                <i class="fa-solid fa-circle-info"></i>
+                            </div>
+                            <img src="@item.url_image">
+                            <h3>@item.Nome</h3>
+                        </div>
+                        <div class="product__card-bottom">
+                            <p>Categoria: @item.Informacoes.Categoria</p>
+                            <a @onclick="() => OpenRead()">VER MAIS</a>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </section>
+}
+else
+{
+    <LoadingComponent />
+}
+
+<New Class="@ClassCreate"/>
+<Read Class="@ClassRead" />
 
 @code {
+    private bool IsCreate = false;
+    private bool IsRead = false;
+    private IEnumerable<ProductModel> data;
 
+    private string ClassCreate => IsCreate ? "modal__main-actived" : "modal__main";
+    private string ClassRead => IsRead ? "modal__main-actived" : "modal__main";
+
+    protected override async Task OnInitializedAsync()
+    {
+        await apiresponse.AuthorizationHeader();
+        await auth.Access(Roles.MANAGER);
+        await LoadData();
+    }
+
+    private async Task LoadData()
+    {
+        data = await service.Get<ProductModel>("product/list");
+        StateHasChanged();
+    }
+
+    private async Task OpenCreate()
+    {
+        IsCreate = !IsCreate;
+    }
+
+    private async Task OpenRead()
+    {
+        IsRead = !IsRead;
+        StateHasChanged();
+    }
 }

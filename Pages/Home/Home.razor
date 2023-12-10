@@ -1,5 +1,29 @@
-﻿<h3>Home</h3>
+﻿@inject ApiResponse apiResponse;
+@inject Authentication auth
+
+@page "/dashboard/home"
+
+<PageTitle>Home</PageTitle>
+
+@if (credentials != null)
+{
+    <Header Name="@name" />
+    <Notifications />
+}
+else
+{
+    <LoadingComponent/>    }
 
 @code {
 
+    private Credentials credentials;
+    private string name;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await auth.Access(Roles.MANAGER);
+        credentials = await apiResponse.Credentials();
+        name = credentials.nome;
+        StateHasChanged();
+    }
 }

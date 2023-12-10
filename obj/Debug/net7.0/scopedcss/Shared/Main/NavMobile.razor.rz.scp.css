@@ -1,0 +1,11 @@
+.nav-link i[b-gdys1uwqtl] {
+    color: var(--clr-nav-icons);
+}
+
+.nav__column[b-gdys1uwqtl] {
+    display: flex;
+    gap: .7rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

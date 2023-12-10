@@ -1,0 +1,52 @@
+﻿<div class="navbottom">
+    <div class="navbottom__content">
+        <div class="navbottom__button">
+            <h2>PRODUTOS</h2>
+            <a>VER MAIS</a>
+        </div>
+        <div class="navbottom__center">
+            <div class="navbottom__center-info">
+                <div class="info__icon">
+                    <i class="fa-solid fa-arrow-up-wide-short"></i>
+                </div>
+                <div class="info__content">
+                    <h2>@vendas VENDAS</h2>
+                    <p>@Date</p>
+                </div>
+            </div>
+            <div class="navbottom__center-info">
+                <div class="info__icon">
+                    <i class="fa-solid fa-money-bill-transfer"></i>
+                </div>
+                <div class="info__content">
+                    <h2>ENTRADA</h2>
+                    <p>@Date</p>
+                </div>
+            </div>
+            <div class="navbottom__center-info">
+                <div class="info__icon">
+                    <i class="fa-solid fa-money-bill-trend-up"></i>
+                </div>
+                <div class="info__content">
+                    <h2>SAÍDA</h2>
+                    <p>@Date</p>
+                </div>
+            </div>
+        </div>
+        <div class="navbottom__button">
+            <h2>CAIXA</h2>
+            <a>VER MAIS</a>
+        </div>
+    </div>
+</div>
+
+@code {
+    private DateTime Date;
+    private int vendas = 0;
+
+    protected override void OnInitialized()
+    {
+        Date = DateTime.Now;
+        string formattedDate = Date.ToString("d MMMM HH:mm");
+    }
+}

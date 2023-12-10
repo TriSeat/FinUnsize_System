@@ -1,0 +1,11 @@
+﻿.nav-link i {
+    color: var(--clr-nav-icons);
+}
+
+.nav__column {
+    display: flex;
+    gap: .7rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

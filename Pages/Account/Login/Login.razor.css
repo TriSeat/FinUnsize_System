@@ -238,6 +238,26 @@ select {
     color: #AAA;
 }
 
+.error-message {
+    text-align: center;
+    color: rgb(250, 49, 55);
+}
+
+.loading {
+    animation: loading 800ms infinite;
+}
+
+@keyframes loading {
+
+    from {
+        background: #AAA; 
+    }
+
+    to {
+        background: #CCC;
+    }
+}
+
 @media screen and (max-width: 1547px) {
     .sign__text .sign__passos {
         display: none;

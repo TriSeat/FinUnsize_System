@@ -1,0 +1,83 @@
+﻿ <section class="@Class">
+        <div class="modal__content">
+            <div class="modal__icons">
+                <div class="modal__icons-left">
+                    <i class="fa-regular fa-circle-xmark" @onclick="CloseModal"></i>
+                    <i class="fa-solid fa-up-right-and-down-left-from-center" @onclick="ExpandModal"></i>
+                </div>
+                <div class="modal__icons-right">
+                    <i class="fa-solid fa-arrows-up-down-left-right" @onclick="ChangeLocal"></i>
+                </div>
+            </div>
+            <div class="modal__header">
+                <div class="modal__header-image">
+                    <img src="./me.png">
+                </div>
+                <div class="modal__header-content">
+                    <div class="modal__header-content-input">
+                        <input type="text" placeholder="NOME DO PRODUTO">
+                    </div>
+                    <div class="modal__header-content-input">
+                        <input type="text" placehold er="PREÇO EM ATACADO">
+                    </div>
+                    <div class="modal__header-content-input">
+                        <input type="text" placeholder="NOME EM VAREJO">
+                    </div>
+                </div>
+            </div>
+            <form class="modal__body">
+                <div class="modal__body-content">
+                    <div class="modal__body__main">
+                        <div class="modal__body__main-input">
+                            <input type="text" placeholder="MARCA" required>
+                        </div>
+                        <div class="modal__body__main-input">
+                            <input type="text" placeholder="VALIDADE" required>
+                        </div>
+                        <div class="modal__body__main-input">
+                            <input type="text" placeholder="TIPO" required>
+                        </div>
+                        <div class="modal__body__main-input">
+                            <input type="text" placeholder="CÓDIGO DE BARRAS" required>
+                        </div>
+                        <div class="modal__body__main-input">
+                            <input type="number" placeholder="QUANTIDADE" required>
+                        </div>
+                        <div class="modal__body__main-input">
+                            <textarea type="text" placeholder="DESCRIÇÃO" spellcheck="true" required></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal__bottom">
+                    <button @onclick="CloseModal">CANCELAR</button>
+                    <button type="submit">CADASTRAR</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+@code {
+
+    [Parameter] public string Class { get; set; }
+    private bool IsExpand;
+    private bool IsChaged;
+
+
+    private void CloseModal()
+    {
+        Class = "modal__main";
+        StateHasChanged();
+    }
+
+    private async Task ExpandModal()
+    {
+        IsExpand = !IsExpand;
+        Class = IsExpand ? "modal__expand" : "modal__main-actived";
+    }
+
+    private async Task ChangeLocal()
+    {
+        IsChaged = !IsChaged;
+        Class = IsChaged ? "modal__changed" : "modal__main-actived";
+    }
+}

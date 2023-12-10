@@ -1,0 +1,66 @@
+﻿@inject ICookieManager cookie
+@inject NavigationManager NavigationManager
+
+
+<div class="mondal" style="display: @(Show ? "block" : "none"); background: @Color;">
+    <div class="modal__content">
+        <div class="modal__header">
+            <h5 class="modal__title" id="exampleModalLabel">Realizar Logout</h5>
+        </div>
+        <div class="modal__body">
+            <p>Deja realmente sair?</p>
+        </div>
+        <div class="modal__footer">
+            <button type="button" class="btn" style="--clr-bnt: #333;" @onclick="Cancel">Cancelar</button>
+            <button type="button" class="btn" style="--clr-bnt: #E15959;" @onclick="Out">Sair</button>
+        </div>
+    </div>
+</div>
+
+@code {
+    [Parameter] public string Color { get; set; } = "#fff";
+    [Parameter] public string Path { get; set; } = "/";
+    [Parameter] public bool Show { get; set; } = false;
+    [Parameter] public EventCallback<bool> ShowChanged { get; set; }
+
+    private Timer timer;
+
+    private async Task Out()
+    {
+        await cookie.DeleteValue();
+        NavigationManager.NavigateTo(Path, forceLoad: true);
+    }
+
+    private async Task Cancel()
+    {
+        Show = false;
+        await ShowChanged.InvokeAsync(false);
+        await InvokeAsync(() => ClearTimer());
+    }
+
+    protected override void OnParametersSet()
+    {
+        base.OnParametersSet();
+
+        if (Show)
+        {
+            StartTimer();
+        }
+    }
+
+    private void StartTimer()
+    {
+        timer = new Timer(async (state) =>
+        {
+            Show = false;
+            await InvokeAsync(() => ShowChanged.InvokeAsync(false));
+            await InvokeAsync(() => StateHasChanged());
+            ClearTimer();
+        }, null, 2300, Timeout.Infinite);
+    }
+
+    private void ClearTimer()
+    {
+        timer?.Dispose();
+    }
+}

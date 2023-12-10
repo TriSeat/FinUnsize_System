@@ -3,17 +3,38 @@
 <PageTitle>FinUnsize</PageTitle>
 
 <div class="page">
-    <div class="sidebar">
-        <NavMenu />
+    <div class="sidebar @(showSidebar ? "expanded" : "collapsed")">
+        <NavMenu ShowNavTextChanged="UpdateSidebar" />
     </div>
+    <div class="app">
+        <NavTop />
 
-    <main>
-        <div class="top-row px-4">
-            <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
-        </div>
-
-        <article class="content px-4">
+        <main>
             @Body
-        </article>
-    </main>
+        </main>
+
+        <div class="mobile-nav">
+            <i class="fa-solid fa-bars" @onclick="CloseMobile"></i>
+            <div class="@ShowMobile">
+                <NavMobile/>
+            </div>
+        </div>
+       <NavBottom/>
+    </div>
 </div>
+
+@code {
+    private bool showSidebar = true;
+    private bool IsActive = false;
+
+    private string ShowMobile => IsActive ? "mobile__bottom-active" : "mobile__bottom";
+
+    private void UpdateSidebar(bool showNavText)
+    {
+        showSidebar = showNavText;
+    }
+    private async Task CloseMobile()
+    {
+        IsActive = !IsActive;
+    }
+}

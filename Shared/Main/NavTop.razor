@@ -1,0 +1,56 @@
+﻿@inject ApiResponse apiResponse;
+
+<div class="navtop">
+    <div class="navtop__content">
+        <div class="navtop__left">
+            <img src="./dash-logo.svg">
+        </div>
+        <div class="navtop__center">
+            <div class="navtop__center__content-input">
+                <input type="text" placeholder="PESQUISAR" />
+                <div class="navtop__center__content-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+        </div>
+        <div class="navtop__right">
+            <div class="navtop__center-mobile-icon">
+                <i class="fa-solid fa-magnifying-glass" @onclick="ActiveInput"></i>
+            </div>
+            <div class="navtop__right-icon">
+                <i class="fa-regular fa-folder-open"></i>
+            </div>
+            <div class="navtop__right-icon">
+                <i class="fa-solid fa-plus"></i>
+            </div>
+            <NavLink href="dashboard/credentials">
+                <div class="navtop__right-image">
+                    <img src="./foto.jpg">
+                </div>
+            </NavLink>
+        </div>
+        <div class="@Mobile">
+            <div class="navtop__center-mobile-input">
+                <i class="fa-solid fa-xmark" @onclick="CloseInput"></i>
+                <input type="text" placeholder="PESQUISAR"/>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    private string test;
+    private bool IsActive;
+
+    private string Mobile => IsActive ? "navtop__center-mobile-actived" : "navtop__center-mobile";
+
+    private async Task ActiveInput()
+    {
+        IsActive = !IsActive;
+    }
+
+    private async Task CloseInput()
+    {
+        IsActive = false;
+    }
+}

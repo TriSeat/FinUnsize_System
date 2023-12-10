@@ -1,0 +1,123 @@
+.users__main[b-ajizab85bi] {
+    width: 100%;
+    color: var(--clr-nav-icons);
+}
+
+.users__content[b-ajizab85bi] {
+    width: 100%;
+    margin-top: 4.3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.users__content-header[b-ajizab85bi] {
+    width: 100%;
+    padding: 0 50px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.users__content-search[b-ajizab85bi] {
+    display: flex;
+    gap: 1rem;
+    align-items: baseline;
+    position: relative;
+}
+
+.users__content-search .fa-list[b-ajizab85bi] {
+    font-size: 1.3rem;
+}
+
+.users__content-search input[b-ajizab85bi] {
+    position: relative;
+    width: 280px;
+    height: 39px;
+    border-radius: 30px;
+    background: var(--clr-second-search);
+    filter: drop-shadow(2px 1px 5px rgba(0, 0, 0, 0.25));
+    outline: none;
+    border: none;
+    padding: 0 10px;
+    font-family: var(--dashboard);
+    color: var(--clr-nav-icons);
+}
+
+.header__search-icon[b-ajizab85bi] {
+    position: absolute;
+    top: .4rem;
+    right: 1rem;
+    color: var(--clr-nav-icons);
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.users__flex[b-ajizab85bi] {
+    display: flex;
+    width: 100%;
+    padding: 0 50px;
+    flex-wrap: wrap;
+    gap: .3rem;
+}
+
+.users__context[b-ajizab85bi] {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    font-family: var(--dashboard);
+}
+
+.users__context i[b-ajizab85bi] {
+    font-size: 1.3rem;
+}
+
+.users__content-flex[b-ajizab85bi] {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.users__card[b-ajizab85bi] {
+    max-width: 214px;
+    width: 100%;
+    height: 214px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--clr-main-card-background);
+    border-radius: 30px;
+    box-shadow: 0px 2px 11px 0px rgba(0, 0, 0, 0.25);
+    gap: 1.5rem;
+    color: var(--clr-main-modal-purpple);
+    font-family: var(--dashboard);
+    font-size: 1.2rem;
+}
+
+.users__card i[b-ajizab85bi] {
+    width: 100%;
+    position: relative;
+    right: 2rem;
+    top: 1rem;
+    font-size: 1rem;
+    text-align: end;
+    color: var(--clr-nav-icons);
+}
+
+.users__card img[b-ajizab85bi] {
+    width: 104px;
+    height: 104px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+@media (max-width: 640.98px) {
+    .users__flex[b-ajizab85bi] {
+        padding: 0 10px;
+    }
+}

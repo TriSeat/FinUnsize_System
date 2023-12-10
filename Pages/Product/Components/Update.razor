@@ -1,0 +1,107 @@
+﻿@inject ApiResponse apiresponse
+@inject ApiService service
+@inject Authentication auth
+
+@if (data != null)
+{
+    <section class="@Class">
+        <div class="modal__content">
+            <div class="modal__icons">
+                <div class="modal__icons-left">
+                    <i class="fa-regular fa-circle-xmark" @onclick="CloseModal"></i>
+                    <i class="fa-solid fa-up-right-and-down-left-from-center" @onclick="ExpandModal"></i>
+                </div>
+                <div class="modal__icons-right">
+                    <i class="fa-solid fa-arrows-up-down-left-right" @onclick="ChangeLocal"></i>
+                </div>
+            </div>
+            <div class="modal__header">
+                <div class="modal__header-image">
+                    <img src="https://www.thebakers.com.br/wp-content/uploads/2019/05/coca-600x540-600x540.png">
+                </div>
+                <div class="modal__header-content">
+                    <div class="modal__header-content-input">
+                        <input type="text" placeholder="NOME DO PRODUTO" @bind="@data.Nome">
+                    </div>
+                    <div class="modal__header-content-input">
+                        <input type="text" placeholder="PREÇO EM ATACADO" @bind="@data.Atacado">
+                    </div>
+                    <div class="modal__header-content-input">
+                        <input type="text" placeholder="NOME EM VAREJO" @bind="@data.Varejo">
+                    </div>
+                </div>
+            </div>
+            <form class="modal__body" @onsubmit="UpdateAsync">
+                <div class="modal__body-content">
+                    <div class="modal__body__main">
+                        <div class="modal__body__main-input">
+                            <input type="text" placeholder="MARCA" @bind="@data.Informacoes.Marca" required>
+                        </div>
+                        <div class="modal__body__main-input">
+                            <input type="text" placeholder="VALIDADE" @bind="@data.Validade" required>
+                        </div>
+                        <div class="modal__body__main-input">
+                            <input type="text" placeholder="TIPO" @bind="@data.Informacoes.Tipo" required>
+                        </div>
+                        <div class="modal__body__main-input">
+                            <input type="text" placeholder="CÓDIGO DE BARRAS" @bind="@data.cod_barras" required>
+                        </div>
+                        <div class="modal__body__main-input">
+                            <input type="number" placeholder="QUANTIDADE" @bind="@data.Quantidade" required>
+                        </div>
+                        <div class="modal__body__main-input">
+                            <textarea type="text" placeholder="DESCRIÇÃO" @bind="@data.Descricao" spellcheck="true" required></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal__bottom">
+                    <button type="button" @onclick="CloseModal">CANCELAR</button>
+                    <button type="submit">ATUALIZAR</button>
+                </div>
+            </form>
+        </div>
+    </section>
+}
+
+@code {
+
+    [Parameter] public string Class { get; set; }
+    private bool IsExpand;
+    private bool IsChaged;
+    private ProductModel data;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await Request();
+    }
+
+    private async Task Request()
+    {
+        await apiresponse.AuthorizationHeader();
+        data = await service.GetUnique<ProductModel>($"product/find/7892840800406");
+    }
+
+    private async Task UpdateAsync()
+    {
+        await apiresponse.AuthorizationHeader();
+        await service.Put<ProductModel>($"product/update/7892840800406", data);
+    }
+
+    private void CloseModal()
+    {
+        Class = "modal__main";
+        StateHasChanged();
+    }
+
+    private async Task ExpandModal()
+    {
+        IsExpand = !IsExpand;
+        Class = IsExpand ? "modal__expand" : "modal__main-actived";
+    }
+
+    private async Task ChangeLocal()
+    {
+        IsChaged = !IsChaged;
+        Class = IsChaged ? "modal__changed" : "modal__main-actived";
+    }
+}

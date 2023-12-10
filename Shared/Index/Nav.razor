@@ -1,5 +1,9 @@
-﻿<nav>
-    <header>
+﻿@inject ICookieManager cookie
+@inject NavigationManager NavigationManager
+@inject IJSRuntime _jsRuntime
+
+<nav>
+    <header class="header">
         <div class="navbar">
             <div class="logo">
                 <img src="./logo-main.svg" alt="Logo da empresa">
@@ -9,12 +13,30 @@
                 <a href="#">Como funciona</a>
                 <a href="#">Planos</a>
                 <div class="linha-vertical"></div>
-                <NavLink href="user/company" style="text-decoration: none;">
-                    <a>Cadastre-se</a>
-                </NavLink>
-                <NavLink href="login" style="text-decoration: none;">
-                    <a class="btn-nav">Login</a>
-                </NavLink>
+                @if (!string.IsNullOrEmpty(checksum))
+                {
+                    <div class="out__content">
+                        <NavLink style="text-decoration: none;" @onclick="Show">
+                            <a>Sair</a>
+                        </NavLink>
+                        <div class="out__overlay">
+                            <LogOut Color="#f5f5f5" Path="/" Show="@show" ShowChanged="State" />
+                        </div>
+                    </div>
+                    <NavLink href="counter" style="text-decoration: none;">
+                        <a class="btn-nav">Dashboard</a>
+                    </NavLink>
+                }
+                else
+                {
+                    <NavLink href="user/company" style="text-decoration: none;">
+                        <a>Cadastre-se</a>
+                    </NavLink>
+                    <NavLink href="login" style="text-decoration: none;">
+                        <a class="btn-nav">Login</a>
+                    </NavLink>
+                }
+
             </div>
             <div class="menu">
                 <div class="menu-line"></div>
@@ -24,3 +46,35 @@
         </div>
     </header>
 </nav>
+
+@code {
+    private LogOut exit;
+    private string checksum;
+    private bool show = false;
+
+    private async Task InicializarAsync()
+    {
+        string token = await cookie.GetValue();
+
+        checksum = token;
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await InicializarAsync();
+            StateHasChanged();
+        }
+    }
+
+    private async Task Show()
+    {
+        show = !show;
+    }
+
+    private void State(bool newState)
+    {
+        show = newState;
+    }
+}

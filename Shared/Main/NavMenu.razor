@@ -1,39 +1,119 @@
-﻿<div class="top-row ps-3 navbar navbar-dark">
+﻿@{
+    string navLinkClass = ChangeRoute();
+}
+
+<div class="top-row ps-3 navbar navbar-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="">FinUnsize</a>
+        @if (!showNavText)
+        {
+            <a class="nav__logo" href=""><img src="./nav-logo.svg"></a>
+        } else
+        {
+            <a class="navbar-brand" href=""><img src="./dash-logo.svg"></a>
+        }
         <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
             <span class="navbar-toggler-icon"></span>
         </button>
     </div>
 </div>
 
-<div class="@NavMenuCssClass nav-scrollable" @onclick="ToggleNavMenu">
+<div class="@NavMenuCssClass" @onmouseover="MouseOverNav" @onmouseout="MouseOutNav">
     <nav class="flex-column">
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="oi oi-home" aria-hidden="true"></span> Home
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="counter">
-                <span class="oi oi-plus" aria-hidden="true"></span> Counter
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="fetchdata">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Fetch data
-            </NavLink>
+        <div class="nav__main">
+            <div class="nav__header">
+                <div class="nav-item px-3">
+                    <NavLink class="@navLinkClass" href="counter">
+                        <i class="fa-regular fa-bell"></i> @GetNavItemText("Notificações")
+                    </NavLink>
+                </div>
+                <div class="nav-item px-3">
+                    <NavLink class="@navLinkClass" href="dashboard/home">
+                        <i class="fa-solid fa-house"></i> @GetNavItemText("Home")
+                    </NavLink>
+                </div>
+            </div>
+            <div class="nav__column">
+                <div class="nav-item px-3">
+                    <NavLink class="@navLinkClass" href="dashboard/product">
+                        <i class="fa-solid fa-box-open"></i>  @GetNavItemText("Produtos")
+                    </NavLink>
+                </div>
+                <div class="nav-item px-3">
+                    <NavLink class="@navLinkClass" href="/dashboard/users">
+                        <i class="fa-solid fa-user"></i> @GetNavItemText("Usuários")
+                    </NavLink>
+                </div>
+                <div class="nav-item px-3">
+                    <NavLink class="@navLinkClass" href="dashboard/purchase">
+                        <i class="fa-solid fa-cart-plus"></i> @GetNavItemText("Compras")
+                    </NavLink>
+                </div>
+                <div class="nav-item px-3">
+                    <NavLink class="@navLinkClass" href="dashboard/sale">
+                        <i class="fa-solid fa-basket-shopping"></i> @GetNavItemText("Vendas")
+                    </NavLink>
+                </div>
+                <div class="nav-item px-3">
+                    <NavLink class="@navLinkClass" href="dashboard/projection">
+                        <i class="fa-solid fa-chart-line"></i> @GetNavItemText("Projeções")
+                    </NavLink>
+                </div>
+                <div class="nav-item px-3">
+                    <NavLink class="@navLinkClass" href="dashboard/cashier">
+                        <i class="fa-solid fa-cash-register"></i> @GetNavItemText("Caixas")
+                    </NavLink>
+                </div>
+                <div class="nav-item px-3">
+                    <NavLink class="@navLinkClass" href="dashboard/employee">
+                        <i class="fa-solid fa-inbox"></i> @GetNavItemText("Funcionários")
+                    </NavLink>
+                </div>
+            </div>
+            <div class="nav__back">
+                <div class="nav-item px-3">
+                    <NavLink class="@navLinkClass" href="dashboard/configuration">
+                        <i class="fa-solid fa-gear"></i> @GetNavItemText("Configurações")
+                    </NavLink>
+                </div>
+            </div>
         </div>
     </nav>
 </div>
 
 @code {
+    [Parameter] public EventCallback<bool> ShowNavTextChanged { get; set; }
+
+    private bool showNavText = false;
     private bool collapseNavMenu = true;
 
-    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+    private string NavMenuCssClass => collapseNavMenu ? "nav-scrollable-collapsed" : "nav-scrollable";
 
     private void ToggleNavMenu()
     {
         collapseNavMenu = !collapseNavMenu;
+        showNavText = false;
+        ShowNavTextChanged.InvokeAsync(showNavText);
+    }
+
+    private void MouseOverNav()
+    {
+        showNavText = true;
+        ShowNavTextChanged.InvokeAsync(showNavText);
+    }
+
+    private void MouseOutNav()
+    {
+        showNavText = false;
+        ShowNavTextChanged.InvokeAsync(showNavText);
+    }
+
+    private string GetNavItemText(string itemName)
+    {
+        return showNavText ? itemName : string.Empty;
+    }
+
+    private string ChangeRoute()
+    {
+        return showNavText ? "left__content" : "nav-link center";
     }
 }

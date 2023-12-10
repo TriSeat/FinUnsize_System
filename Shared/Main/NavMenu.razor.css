@@ -1,53 +1,101 @@
+nav {
+    width: 100%;
+    height: 100%;
+}
+
+nav i {
+    font-size: 1.3rem;
+    transition: 500ms ease-out;
+}
+
 .navbar-toggler {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--clr-main-components);
 }
 
-.top-row {
-    height: 3.5rem;
-    background-color: rgba(0,0,0,0.4);
+.navbar {
+    margin-top: 1rem;
 }
 
-.navbar-brand {
-    font-size: 1.1rem;
+.nav-scrollable-collapsed {
+    width: 100%;
+    height: 100%;
 }
 
-.oi {
-    width: 2rem;
-    font-size: 1.1rem;
-    vertical-align: text-top;
-    top: -2px;
-}
-
-.nav-item {
-    font-size: 0.9rem;
-    padding-bottom: 0.5rem;
+.nav__logo img {
+    width: 50px;
+    height: 50px;
 }
 
     .nav-item:first-of-type {
-        padding-top: 1rem;
+        padding-top: 2rem;
     }
 
     .nav-item:last-of-type {
         padding-bottom: 1rem;
     }
 
-    .nav-item ::deep a {
-        color: #d7d7d7;
-        border-radius: 4px;
-        height: 3rem;
-        display: flex;
-        align-items: center;
-        line-height: 3rem;
-    }
+.nav-item ::deep a {
+    color: var(--clr-nav-icons);
+    border-radius: 4px;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    line-height: 3rem;
+    position: relative;
+    text-decoration: none;
+}
+
+.left__content {
+    justify-content: flex-start;
+}
+
+.nav-item ::deep a.active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: .2rem;
+    height: 2.8rem;
+    border-radius: 10px;
+    background: var(--clr-main-context);
+}
 
 .nav-item ::deep a.active {
-    background-color: rgba(255,255,255,0.25);
-    color: white;
+    background-color: #6d6dbf41;
+    color: var(--clr-main-context);
+}
+
+.nav-item ::deep a.active i {
+    margin-left: .4rem;
 }
 
 .nav-item ::deep a:hover {
     background-color: rgba(255,255,255,0.1);
-    color: white;
+    color: var(--clr-main-context);
+}
+
+.nav-item ::deep a:hover i {
+    margin-left: 1rem;
+    transition: 500ms ease-out;
+}
+
+.nav__main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.nav__column {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.nav__back {
+    margin-bottom: 2rem;
 }
 
 @media (min-width: 641px) {
@@ -56,12 +104,10 @@
     }
 
     .collapse {
-        /* Never collapse the sidebar for wide screens */
         display: block;
     }
     
     .nav-scrollable {
-        /* Allow sidebar to scroll for tall menus */
         height: calc(100vh - 3.5rem);
         overflow-y: auto;
     }

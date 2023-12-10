@@ -1,12 +1,56 @@
-﻿@page "/employee"
+﻿@page "/dashboard/employee"
 
-<link rel="stylesheet" href="__/Employee.razor.css">
+<PageTitle>Funcionário</PageTitle>
 
+<HeaderEmployee/>
 
-
-
-
-<h3>Employee</h3>
+<section class="users__main">
+    <div class="users__content">
+        <div class="users__content-header">
+            <div class="users__content-search">
+                <i class="fa-solid fa-list"></i>
+                <input type="text" placeholder="PESQUISE POR UM FUNCIONÁRIO">
+                <div class="header__search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+        </div>
+        <div class="users__flex">
+            <div class="users__context">
+                <i class="fa-solid fa-clipboard-user"></i>
+                <h4>FUNCIONÁRIOS</h4>
+            </div>
+            <div class="users__content-flex">
+                <div class="users__card">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                    <img src="./tes.jpg">
+                    <p>ALFREDO GOMES</p>
+                </div>
+            </div>
+            <div class="users__content-flex">
+                <div class="users__card">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                    <img src="./tes.jpg">
+                    <p>ALFREDO GOMES</p>
+                </div>
+            </div>
+            <div class="users__content-flex">
+                <div class="users__card">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                    <img src="./tes.jpg">
+                    <p>ALFREDO GOMES</p>
+                </div>
+            </div>
+            <div class="users__content-flex">
+                <div class="users__card">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                    <img src="./tes.jpg">
+                    <p>ALFREDO GOMES</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 @code {
 

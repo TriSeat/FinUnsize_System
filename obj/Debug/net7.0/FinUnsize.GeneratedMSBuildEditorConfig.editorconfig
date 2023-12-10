@@ -1,0 +1,247 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = FinUnsize
+build_property.RootNamespace = FinUnsize
+build_property.ProjectDir = C:\Users\Gui-Ribs\Desktop\FinUnsize_System-main\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Gui-Ribs\Desktop\FinUnsize_System-main
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Gui-Ribs/Desktop/FinUnsize_System-main/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Gui-Ribs/Desktop/FinUnsize_System-main/Pages/Counter.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Gui-Ribs/Desktop/FinUnsize_System-main/Pages/LoadingComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9hZGluZ0NvbXBvbmVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Gui-Ribs/Desktop/FinUnsize_System-main/Pages/Teste.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGVzdGUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Gui-Ribs/Desktop/FinUnsize_System-main/Shared/Accounts/SignLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEFjY291bnRzXFNpZ25MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Gui-Ribs/Desktop/FinUnsize_System-main/Shared/Index/Lpa.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEluZGV4XExwYS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Gui-Ribs/Desktop/FinUnsize_System-main/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Gui-Ribs/Desktop/FinUnsize_System-main/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Gui-Ribs/Desktop/FinUnsize_System-main/Pages/Account/Company/Company.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxDb21wYW55XENvbXBhbnkucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-qkqhndwhca
+
+[C:/Users/Gui-Ribs/Desktop/FinUnsize_System-main/Pages/Account/Login/Login.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxMb2dpblxMb2dpbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-4cnqd7q61v
+
+[C:/Users/Gui-Ribs/Desktop/FinUnsize_System-main/Pages/Account/Payment/Payment.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxQYXltZW50XFBheW1lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-8u5p81e7ek
+
+[C:/Users/Gui-Ribs/Desktop/FinUnsize_System-main/Pages/Account/Redirect/Redirect.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxSZWRpcmVjdFxSZWRpcmVjdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-w9u8rjh3a0
+
+[C:/Users/Gui-Ribs/Desktop/FinUnsize_System-main/Pages/Account/Sign/Sign.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxTaWduXFNpZ24ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-ttf1hxj76c
+
+[C:/Users/Gui-Ribs/Desktop/FinUnsize_System-main/Pages/Cashier/Cashier.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FzaGllclxDYXNoaWVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-v79mfwlqd5
+
+[C:/Users/Gui-Ribs/Desktop/FinUnsize_System-main/Pages/Configuration/Configuration.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29uZmlndXJhdGlvblxDb25maWd1cmF0aW9uLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-q6an79v1uu
+
+[C:/Users/Gui-Ribs/Desktop/FinUnsize_System-main/Pages/Employee/Components/HeaderEmployee.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW1wbG95ZWVcQ29tcG9uZW50c1xIZWFkZXJFbXBsb3llZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-etsjj6tz9k
+
+[C:/Users/Gui-Ribs/Desktop/FinUnsize_System-main/Pages/Employee/Employee.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW1wbG95ZWVcRW1wbG95ZWUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-m4c7uxmjqt
+
+[C:/Users/Gui-Ribs/Desktop/FinUnsize_System-main/Pages/Expanse/Components/HeaderExpanse.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXhwYW5zZVxDb21wb25lbnRzXEhlYWRlckV4cGFuc2UucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-9zmyiprjnv
+
+[C:/Users/Gui-Ribs/Desktop/FinUnsize_System-main/Pages/Expanse/Expanse.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXhwYW5zZVxFeHBhbnNlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-2ywpaqmcb8
+
+[C:/Users/Gui-Ribs/Desktop/FinUnsize_System-main/Pages/Home/Components/Header.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZVxDb21wb25lbnRzXEhlYWRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-ji1ajh0unq
+
+[C:/Users/Gui-Ribs/Desktop/FinUnsize_System-main/Pages/Home/Components/Notifications.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZVxDb21wb25lbnRzXE5vdGlmaWNhdGlvbnMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-ouqxhxdu8k
+
+[C:/Users/Gui-Ribs/Desktop/FinUnsize_System-main/Pages/Home/Home.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZVxIb21lLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-yfa4anl0v9
+
+[C:/Users/Gui-Ribs/Desktop/FinUnsize_System-main/Pages/LPA/Components/About/About.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTFBBXENvbXBvbmVudHNcQWJvdXRcQWJvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-u3wnpaop5l
+
+[C:/Users/Gui-Ribs/Desktop/FinUnsize_System-main/Pages/LPA/Components/Advantages/Advantages.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTFBBXENvbXBvbmVudHNcQWR2YW50YWdlc1xBZHZhbnRhZ2VzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-82hzx1inl3
+
+[C:/Users/Gui-Ribs/Desktop/FinUnsize_System-main/Pages/LPA/Components/Affirmation/Affirmation.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTFBBXENvbXBvbmVudHNcQWZmaXJtYXRpb25cQWZmaXJtYXRpb24ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-yb61m9y5l9
+
+[C:/Users/Gui-Ribs/Desktop/FinUnsize_System-main/Pages/LPA/Components/Forms/Forms.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTFBBXENvbXBvbmVudHNcRm9ybXNcRm9ybXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-ewyxdv9cua
+
+[C:/Users/Gui-Ribs/Desktop/FinUnsize_System-main/Pages/LPA/Components/Hero/Hero.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTFBBXENvbXBvbmVudHNcSGVyb1xIZXJvLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-45kfppyxr8
+
+[C:/Users/Gui-Ribs/Desktop/FinUnsize_System-main/Pages/LPA/Components/Howitworks/Howitworks.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTFBBXENvbXBvbmVudHNcSG93aXR3b3Jrc1xIb3dpdHdvcmtzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-cms2k6w6cw
+
+[C:/Users/Gui-Ribs/Desktop/FinUnsize_System-main/Pages/LPA/Components/Price/Price.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTFBBXENvbXBvbmVudHNcUHJpY2VcUHJpY2UucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-0vrzhwr5lw
+
+[C:/Users/Gui-Ribs/Desktop/FinUnsize_System-main/Pages/LPA/Components/Service/Service.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTFBBXENvbXBvbmVudHNcU2VydmljZVxTZXJ2aWNlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-ar04ydjyh7
+
+[C:/Users/Gui-Ribs/Desktop/FinUnsize_System-main/Pages/LPA/Components/Solution/Solution.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTFBBXENvbXBvbmVudHNcU29sdXRpb25cU29sdXRpb24ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-tp7qqb5phs
+
+[C:/Users/Gui-Ribs/Desktop/FinUnsize_System-main/Pages/LPA/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTFBBXEluZGV4LnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-e3kvr7ol6h
+
+[C:/Users/Gui-Ribs/Desktop/FinUnsize_System-main/Pages/Organization/Organization.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3JnYW5pemF0aW9uXE9yZ2FuaXphdGlvbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-2ecc3gfjyo
+
+[C:/Users/Gui-Ribs/Desktop/FinUnsize_System-main/Pages/Product/Components/New.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdFxDb21wb25lbnRzXE5ldy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-s2uuok2fpe
+
+[C:/Users/Gui-Ribs/Desktop/FinUnsize_System-main/Pages/Product/Components/Read.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdFxDb21wb25lbnRzXFJlYWQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-tfs14ey1uy
+
+[C:/Users/Gui-Ribs/Desktop/FinUnsize_System-main/Pages/Product/Components/Update.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdFxDb21wb25lbnRzXFVwZGF0ZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-ffm9c74x74
+
+[C:/Users/Gui-Ribs/Desktop/FinUnsize_System-main/Pages/Product/Product.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdFxQcm9kdWN0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-1ltzaacp6d
+
+[C:/Users/Gui-Ribs/Desktop/FinUnsize_System-main/Pages/Projections/Projection.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvamVjdGlvbnNcUHJvamVjdGlvbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-v8hcycq3do
+
+[C:/Users/Gui-Ribs/Desktop/FinUnsize_System-main/Pages/Purchase/Components/HeaderPurchase.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHVyY2hhc2VcQ29tcG9uZW50c1xIZWFkZXJQdXJjaGFzZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-cci7s2gpen
+
+[C:/Users/Gui-Ribs/Desktop/FinUnsize_System-main/Pages/Purchase/Purchase.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHVyY2hhc2VcUHVyY2hhc2UucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-fcahu37bq1
+
+[C:/Users/Gui-Ribs/Desktop/FinUnsize_System-main/Pages/Sale/Components/HeaderSale.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2FsZVxDb21wb25lbnRzXEhlYWRlclNhbGUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-ggth04kkzx
+
+[C:/Users/Gui-Ribs/Desktop/FinUnsize_System-main/Pages/Sale/Sale.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2FsZVxTYWxlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-ond7ekzo25
+
+[C:/Users/Gui-Ribs/Desktop/FinUnsize_System-main/Pages/UserData/Components/HeaderCredentials.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlckRhdGFcQ29tcG9uZW50c1xIZWFkZXJDcmVkZW50aWFscy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-453snsgvhu
+
+[C:/Users/Gui-Ribs/Desktop/FinUnsize_System-main/Pages/UserData/Data.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlckRhdGFcRGF0YS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-94g77x42ti
+
+[C:/Users/Gui-Ribs/Desktop/FinUnsize_System-main/Pages/User/Components/InfoHeader.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclxDb21wb25lbnRzXEluZm9IZWFkZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-s0taxf8ndz
+
+[C:/Users/Gui-Ribs/Desktop/FinUnsize_System-main/Pages/User/Components/UserHeader.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclxDb21wb25lbnRzXFVzZXJIZWFkZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-rqcazwiryd
+
+[C:/Users/Gui-Ribs/Desktop/FinUnsize_System-main/Pages/User/User.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclxVc2VyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-ajizab85bi
+
+[C:/Users/Gui-Ribs/Desktop/FinUnsize_System-main/Shared/Global/LogOut.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEdsb2JhbFxMb2dPdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-0uz12jy9d8
+
+[C:/Users/Gui-Ribs/Desktop/FinUnsize_System-main/Shared/Index/Footer.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEluZGV4XEZvb3Rlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-baj2objfkg
+
+[C:/Users/Gui-Ribs/Desktop/FinUnsize_System-main/Shared/Index/Nav.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEluZGV4XE5hdi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-wy1hb8ih3w
+
+[C:/Users/Gui-Ribs/Desktop/FinUnsize_System-main/Shared/Main/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5cTWFpbkxheW91dC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-s8ggt1wqft
+
+[C:/Users/Gui-Ribs/Desktop/FinUnsize_System-main/Shared/Main/NavBottom.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5cTmF2Qm90dG9tLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-mefhluym11
+
+[C:/Users/Gui-Ribs/Desktop/FinUnsize_System-main/Shared/Main/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5cTmF2TWVudS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-a1cd85fobw
+
+[C:/Users/Gui-Ribs/Desktop/FinUnsize_System-main/Shared/Main/NavMobile.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5cTmF2TW9iaWxlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-gdys1uwqtl
+
+[C:/Users/Gui-Ribs/Desktop/FinUnsize_System-main/Shared/Main/NavTop.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5cTmF2VG9wLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-yvdpn0i2i2
+
+[C:/Users/Gui-Ribs/Desktop/FinUnsize_System-main/Pages/Blazor/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQmxhem9yXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Gui-Ribs/Desktop/FinUnsize_System-main/Pages/Blazor/_Host.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQmxhem9yXF9Ib3N0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 

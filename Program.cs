@@ -1,16 +1,16 @@
-using FinUnsize.Data;
-using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Components.Web;
 using dotenv.net;
+using FinUnsize.Helpers;
 
 DotEnv.Load();
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
-builder.Services.AddSingleton<WeatherForecastService>();
+builder.Services.AddAppServices();
+builder.Services.AddScoped <HttpClient>(sp => new HttpClient { BaseAddress = new Uri(builder.Configuration["ApiSettings:BaseUrl"]) });
+builder.Services.AddHttpContextAccessor();
 
 var app = builder.Build();
 

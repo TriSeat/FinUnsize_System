@@ -1,0 +1,17 @@
+﻿.header__expanse {
+    width: 100%;
+    height: 30%;
+    color: var(--clr-nav-icons);
+}
+
+.header__content {
+    width: 100%;
+    height: 100%;
+    background: bottom / cover no-repeat url('./header-main.svg'), var(--clr-main-header);
+    padding: 1rem 1.7rem;
+}
+
+.header__content {
+    display: flex;
+    flex-direction: column;
+}

@@ -26,7 +26,8 @@
 
 .video-container {
     position: relative;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
 }
 
 .thumbnail {

@@ -1,38 +1,40 @@
 ﻿:root {
     /*Main Colors*/
 
-    --clr-main-background: rgba(58, 60, 81, 0.4);
+    --clr-main-main: linear-gradient(52deg, #1E1F2C -8.22%, #383A4D 109.96%);
+    --clr-main-background: rgba(58, 60, 81, 0.40);
     --clr-main-vector-background: rgba(176, 179, 220, 0.07);
-
     --clr-main-white: #fff;
     --clr-main-context: #9195B5;
     --clr-main-components: #0C0A0F;
     --clr-main-buttons: #3D4160;
     --clr-main-cards: #171822;
     --clr-main-cards-bottom: #1E1F2C;
-    --clr-main-header: linear-gradient(280deg, rgba(28, 29, 45, 0.80) -8.99%, rgba(21, 21, 36, 0.99) -8.98%, #1C1D2F 78.89%);
+    --clr-main-header: linear-gradient(280deg, rgba(28, 29, 45, 0.80) -8.99%, rgba(21, 21, 36, 0.99) -8.98%);
     --clr-main-search: #383a4d46;
     --clr-second-search: #383A4D;
     --clr-second-card: #3C3E5261;
     --clr-second-header-background: linear-gradient(99deg, rgba(56, 58, 77, 0.90) -43.06%, rgba(26, 27, 45, 0.90) 66.71%);
     --clr-second-card-background: linear-gradient(320deg, rgba(22, 23, 37, 0.21) -31.52%, rgba(88, 91, 140, 0.21) 197.25%);
-
-
+    --clr-main-input-back: rgba(56, 58, 77, 0.08);
+    --clr-main-input-back-mobile: rgb(56, 58, 77);
+    --clr-main-border: #282A39;
+    --clr-main-nav--back: #282936;
+    --clr-main-nav--back-icons: rgba(245, 245, 245, 0.55);
+    --clr-main-paragraph-context: rgba(255, 255, 255, 0.55);
     /*Home Components*/
 
     --clr-home-line: #9195B5;
     --clr-cards-header: #27293A;
     --clr-wave-cards: #141525;
-
-
     /*Bars*/
 
     --clr-sidebar-config: #27293A;
-    --clr-nav-icons: #f5f5f591;
+    --clr-nav-icons: #f5f5f5;
     --clr-nav-components-background: #282A39;
-    --clr-buttom-bar: #282936;
-
-
+    --clr-bottom-bar: #282936;
+    --clr-paragraph-bar: rgba(245, 245, 245, 0.44);
+    --clr-bottom-bar-hover: #3e3f4e;
     /*Modal colors*/
 
     --clr-main-modal: rgba(40, 42, 57, 0.96);
@@ -41,24 +43,20 @@
     --clr-main-modal-button: #E15959;
     --clr-main-modal-button-secondary: #9195B5;
     --clr-main-modal-purpple: #B0B3DC;
-
-
     /*Employee*/
 
     --clr-main-employee-component: #1E1F2C;
+    /*Users*/
 
+    --clr-main-users-icon: rgba(145, 149, 181, 0.74);
 
     /*Table Components*/
 
     --clr-main-background-table: #14152559;
     --clr-main-table-components: #383A4DCC;
-
-
     /*Projections*/
 
     --clr-main-card-background: rgba(58, 60, 81, 0.90);
-
-
     /*Home*/
 
     --cor-preto: #333;

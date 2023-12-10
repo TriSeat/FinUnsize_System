@@ -1,6 +1,10 @@
 ﻿@page "/login"
 @page "/user/login"
 @layout SignLayout
+@inject ApiResponse apiResponse
+@inject IJSRuntime jsRuntime;
+@inject NavigationManager NavigationManager
+@inject ICookieManager cookie
 
 <PageTitle>Login</PageTitle>
 
@@ -24,15 +28,20 @@
             </div>
             <div class="sign__text">
                 <div class="sign__payload">
-                    <form>
+                    <form @onsubmit="Entry">
                         <div>
-                            <input type="text" placeholder="LOGIN" class="cvc" required>
-                            <input type="password" placeholder="Senha" class="titular" required>
+                            <input type="text" placeholder="LOGIN" class="cvc" @bind="login" @ref="loginInput" autofocus required>
+                            <input type="password" placeholder="Senha" class="titular" @bind="password" required>
                         </div>
+                        @if (!string.IsNullOrEmpty(errorMessage))
+                        {
+                            <p class="error-message">@errorMessage</p>
+                        }
                         <div class="form-bottom">
-                            <button type="submit">EFETUAR O LOGIN</button>
+                            <button type="submit" class="@btn">EFETUAR O LOGIN</button>
                             <p>Não possui uma conta? <a href="/user/company">Faça o Cadastro</a></p>
                         </div>
+                        
                     </form>
                 </div>
             </div>
@@ -41,5 +50,36 @@
 </section>
 
 @code {
+    private string login;
+    private string password;
+    private bool isLoading;
+    private string btn;
+    private string errorMessage;
+    ElementReference loginInput;
 
+    private async Task Entry()
+    {
+        isLoading = true;
+
+        if (isLoading)
+        {
+            btn = "loading";
+        }
+
+        var endpoint = "user/login";
+        var response = await apiResponse.Login(endpoint, login, password);
+
+        isLoading = false;
+
+        if (response == "200")
+        {
+            NavigationManager.NavigateTo("/count");
+        }
+        else
+        {
+            errorMessage = "Login ou Senha estão incorretos";
+            loginInput.FocusAsync();
+            btn = null;
+        }
+    }
 }

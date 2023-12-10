@@ -1,0 +1,38 @@
+.mondal[b-0uz12jy9d8] {
+    position: fixed;
+    width: 220px;
+    height: 125px;
+    filter: drop-shadow(2px 2px 3px #000);
+    border-radius: 5px;
+    transition: 500ms ease;
+}
+
+.mondal h5[b-0uz12jy9d8] {
+    text-transform: uppercase;
+    font-family: var(--regular);
+    font-size: 1rem;
+}
+
+.modal__content[b-0uz12jy9d8] {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: .8rem;
+}
+
+.btn[b-0uz12jy9d8] {
+    padding: 5px 5px;
+    background: var(--clr-bnt);
+    color: #fff;
+}
+
+.modal__footer[b-0uz12jy9d8] {
+    display: flex;
+    gap: 1rem;
+}
+
+.modal__footer button:nth-child(2)[b-0uz12jy9d8] {
+    width: 70px;
+}

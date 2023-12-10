@@ -1,0 +1,92 @@
+﻿<section class="header__home">
+    <div class="header__content">
+        <div class="header__header">
+            <div class="header__left">
+                <img src="./foto.jpg">
+                <h2>@salutation, @Name</h2>
+            </div>
+            <div class="header__right">
+                <p><span>HOME</span> | VIEW</p>
+            </div>
+        </div>
+        <div class="header__overlapping">
+            <div class="header__icons">
+                <i class="fa-solid fa-list"></i>
+            </div>
+            <div class="header__flex-cards">
+                <div class="header__card">
+                    <div class="header__card-header">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                    <div class="header__card-content">
+                        <i class="fa-solid fa-dolly"></i>
+                        <h3>0 Vendas</h3>
+                    </div>
+                    <div class="header__card-bottom">
+                        <p>Vendas Totais</p>
+                    </div>
+                </div>
+                <div class="header__card">
+                    <div class="header__card-header">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                    <div class="header__card-content">
+                        <i class="fa-solid fa-coins"></i>
+                        <h3>R$ 0,00</h3>
+                    </div>
+                    <div class="header__card-bottom">
+                        <p>Balanço Atual</p>
+                    </div>
+                </div>
+                <div class="header__card">
+                    <div class="header__card-header">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                    <div class="header__card-content">
+                        <i class="fa-solid fa-coins"></i>
+                        <h3>R$ 0,00</h3>
+                    </div>
+                    <div class="header__card-bottom">
+                        <p>Estimativa Atual</p>
+                    </div>
+                </div>
+                <div class="header__card">
+                    <div class="header__card-header">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                    <div class="header__card-content">
+                        <i class="fa-solid fa-receipt"></i>
+                        <h3>0 Despesas</h3>
+                    </div>
+                    <div class="header__card-bottom">
+                        <p>Despesas Atuais</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@code {
+    [Parameter] public string Name { get; set; }
+    private string salutation;
+    private DateTime time;
+
+    protected override void OnInitialized()
+    {
+        time = DateTime.Now;
+
+        if (time.Hour >= 6 && time.Hour < 12)
+        {
+            salutation = "Bom Dia";
+        }
+        else if (time.Hour >= 12 && time.Hour < 18)
+        {
+            salutation = "Boa Tarde";
+        }
+        else
+        {
+            salutation = "Boa Noite";
+        }
+    }
+}

@@ -2,6 +2,8 @@
 @page "/user/company"
 @layout SignLayout
 @inject NavigationManager NavigationManager
+@inject ApiService service
+@inject IJSRuntime jsRuntime
 
 <PageTitle>Company</PageTitle>
 
@@ -48,24 +50,24 @@
                     <form @onsubmit="OnSubmitForm">
                         <h2>Dados Empresariais</h2>
                         <div>
-                            <input type="text" placeholder="CNPJ" class="cnpj" required>
-                            <input type="text" placeholder="Nome" class="nome" required>
+                            <input type="text" placeholder="CNPJ" class="cnpj" @bind="company.Cnpj" required>
+                            <input type="text" placeholder="Nome" class="nome" @bind="company.Nome" required>
                         </div>
                         <div>
-                            <input type="text" placeholder="Slogan" class="slogan" required>
-                            <input type="text" placeholder="Segmento" class="segmento" required>
+                            <input type="text" placeholder="Slogan" class="slogan" @bind="company.Slogan" required>
+                            <input type="text" placeholder="Segmento" class="segmento" @bind="company.Segmento" required>
                         </div>
                         <div>
                             <input type="text" placeholder="CEP" class="cep" required>
-                            <input type="text" placeholder="Renda Média" class="renda" required>
+                            <input type="text" placeholder="Renda Média" class="renda" @bind="company.RendaMedia" required>
                         </div>
                         <div>
                             <input type="text" placeholder="Balanço Atual" class="balanco" required>
-                            <input type="text" placeholder="Média das Despesas" class="despesas" required>
+                            <input type="text" placeholder="Média das Despesas" class="despesas" @bind="company.DespesaMedia" required>
                         </div>
                         <div>
-                            <input type="text" placeholder="Razão Social" class="razao" required>
-                            <input type="image" placeholder="Imagem" class="image" required>
+                            <input type="text" placeholder="Razão Social" class="razao" @bind="company.Razao" required>
+                            <input type="file" placeholder="Imagem" class="image" @bind="company.url_image">
                         </div>
                         <div class="form-bottom">
                             <button type="submit">CADASTRAR EMPRESA</button>
@@ -79,5 +81,18 @@
 </section>
 
 @code {
-    private async Task OnSubmitForm() => NavigationManager.NavigateTo("/user/sign");
+    private CompanyModel company = new CompanyModel();
+
+    private async Task OnSubmitForm()
+    {
+        try
+        {
+            await service.Post<object>("company/create", company);
+            NavigationManager.NavigateTo("/user/sign");
+        }
+        catch (HttpRequestException ex)
+        {
+            await jsRuntime.InvokeVoidAsync("alert", "Erro ao cadastrar empresa: " + ex.Message);
+        }
+    } 
 }

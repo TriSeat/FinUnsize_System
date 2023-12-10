@@ -1,5 +1,61 @@
-﻿<h3>User</h3>
+﻿@inject ApiResponse apiResponse;
+@inject Authentication auth
+
+@page "/dashboard/users"
+
+<PageTitle>Usuários</PageTitle>
+
+<InfoHeader/>
+<!--<UserHeader/>-->
+
+@if (credentials != null)
+{
+    <section class="users__main">
+        <div class="users__content">
+            <div class="users__content-header">
+                <div class="users__content-search">
+                    <i class="fa-solid fa-list"></i>
+                    <input type="text" placeholder="PESQUISE POR UM USUÁRIO">
+                    <div class="header__search-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="users__flex">
+                <div class="users__context">
+                    <i class="fa-solid fa-user"></i>
+                    <h4>GERENTES</h4>
+                </div>
+                <div class="users__content-flex">
+                    <div class="users__card">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                        <img src="@credentials.url_image">
+                        <p>@credentials.nome</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+}
+else
+{
+    <LoadingComponent/>    }
+
+
 
 @code {
+    private Credentials credentials;
 
+    protected override async Task OnInitializedAsync()
+    {
+        await apiResponse.AuthorizationHeader();
+        await auth.Access(Roles.MANAGER);
+        await LoadData();
+    }
+
+    private async Task LoadData()
+    {
+        credentials = await apiResponse.Credentials();
+        StateHasChanged();
+    }
 }

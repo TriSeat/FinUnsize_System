@@ -1,0 +1,37 @@
+﻿@inject ApiResponse apiResponse;
+@inject Authentication auth
+
+@page "/dashboard/credentials"
+
+<HeaderCredentials/>
+
+@if (credentials != null)
+{
+    <div class="credentials__main">
+        <div class="credentials__inputs">
+            <input type="text" placeholder="Nome: " @bind="@credentials.nome" />
+            <input type="text" placeholder="Email: " @bind="@credentials.email" />
+            <input type="password" placeholder="Senha: " @bind="@credentials.email" />
+        </div>
+        <div class="credentials__bottom">
+            <button>ATUALIZAR</button>
+            <button>EXCLUIR</button>
+        </div>
+    </div>
+}
+else
+{
+    <LoadingComponent/>
+}
+
+
+@code {
+    private Credentials credentials;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await auth.Access(Roles.MANAGER);
+        credentials = await apiResponse.Credentials();
+        StateHasChanged();
+    }
+}

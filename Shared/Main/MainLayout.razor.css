@@ -2,14 +2,24 @@
     position: relative;
     display: flex;
     flex-direction: column;
-}
-
-main {
-    flex: 1;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 .sidebar {
-    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--clr-main-components);
+}
+
+.collapsed {
+    position: sticky;
+}
+
+.expanded {
+    align-items: flex-start;
+    z-index: 999;
 }
 
 .top-row {
@@ -31,6 +41,86 @@ main {
         text-overflow: ellipsis;
     }
 
+.app {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--clr-main-main);
+}
+
+.app main {
+    width: 100%;
+    height: 100%;
+    background: url(./main.svg) var(--clr-main-background) no-repeat;
+    background-position: top;
+    background-size: cover;
+    box-shadow: 4px 1px 4px 0px rgba(0, 0, 0, 0.25);
+    overflow-y: auto;
+}
+
+.app main::-webkit-scrollbar-track {
+    padding: 2px 0;
+    background-color: var(--clr-main-components);
+}
+
+.app main::-webkit-scrollbar {
+    width: 10px;
+}
+
+.app main::-webkit-scrollbar-thumb {
+    border-radius: 50px;
+    box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: rgba(60, 62, 82, 0.38);
+}
+
+.mobile-nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    right: 10%;
+    bottom: 3rem;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: var(--clr-main-components);
+    display: none;
+    z-index: 10;
+}
+
+.mobile__bottom-active {
+    position: absolute;
+    bottom: 110%;
+    background: var(--clr-main-components);
+    border-radius: 20px;
+    padding: 10px;
+    animation: slider 500ms;
+}
+
+.mobile__bottom {
+    display: none;
+}
+
+.mobile-nav i {
+    color: var(--clr-nav-icons);
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+@keyframes slider {
+    from {
+        transform: translateY(100px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
 @media (max-width: 640.98px) {
     .top-row:not(.auth) {
         display: none;
@@ -43,6 +133,24 @@ main {
     .top-row a, .top-row .btn-link {
         margin-left: 0;
     }
+
+    .mobile-nav {
+        display: flex;
+    }
+
+    .sidebar {
+        display: none;
+    }
+}
+
+@media (max-height: 798px) {
+    .mobile-nav {
+        display: flex;
+    }
+
+    .sidebar {
+        display: none;
+    }
 }
 
 @media (min-width: 641px) {
@@ -51,9 +159,7 @@ main {
     }
 
     .sidebar {
-        width: 250px;
         height: 100vh;
-        position: sticky;
         top: 0;
     }
 
