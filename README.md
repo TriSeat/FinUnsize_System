@@ -51,7 +51,7 @@ dotnet run
 ```
 
 **Observação:** Para que o sistema esteja conectado ao banco e as regras de negócio, é necessário
-que a API esteja rodando em localhost. Para tal, siga os passos de como a subir no repositório [FinUnsize_API](https://github.com/TriSeat/FinUnsize_API/bl).
+que a API esteja rodando em localhost. Para tal, siga os passos de como a subir no repositório [FinUnsize_API](https://github.com/TriSeat/FinUnsize_API).
 Pós subir, adicione a url base no arquivo: **appsettings.json**. Exemplo:
 
 ```JSON
